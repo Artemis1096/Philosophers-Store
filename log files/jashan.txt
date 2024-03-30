@@ -1,0 +1,4 @@
+30 March 
+backend basic setup
+installed nodemon,express,mongoose,morgan
+morgan -> prints all the api requests on console

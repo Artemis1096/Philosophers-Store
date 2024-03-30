@@ -1,0 +1,6 @@
+500 -> Server Error
+
+In Login/Register
+    200->for incorrect data
+    201->successful entry to DB
+    404->if we are not able to access database
