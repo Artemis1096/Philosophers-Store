@@ -3,13 +3,15 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoute from './routes/authRoute.js'
+import bodyparser from "body-parser"
 import cors from 'cors'
 
 dotenv.config();
 connectDB();
 
 const app = express()
-
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 // middleware
 app.use(cors());
 app.use(express.json())
