@@ -26,6 +26,7 @@ export const isAdmin =async (req,res,next)=>{
         }
     }
     catch(error){
+        // remove this part when deploying the code
         console.log(error);
         res.status(401).send({
             success:false,

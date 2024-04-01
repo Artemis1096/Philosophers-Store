@@ -10,7 +10,12 @@ import Dashboard from "./pages/user/Dashboard.js";
 import PrivateRoute from "./components/Routes/Private.js";
 import ForgotPassword from "./pages/Auth/ForgotPassword.js";
 import AdminRoute from "./components/Routes/AdminRoute.js"
-import AdminDashboard from "./pages/admin/adminDashboard.js"
+import AdminDashboard from "./pages/admin/adminDashboard.js";
+import CreateCategory from "./pages/admin/CreateCategory.js";
+import CreateProduct from "./pages/admin/CreateProduct.js"
+import Users from "./pages/admin/Users.js"
+import Orders from "./pages/user/Orders.js"
+import Profile from "./pages/user/Profile.js"
 
 function App() {
   return (
@@ -24,12 +29,19 @@ function App() {
         <Route path="*" element={<Pagenotfound />} />
 
 
-        {/* Dashboard routes */}
+        {/*User Dashboard routes */}
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
+          <Route path="user/orders" element={<Orders />} />
+          <Route path="user/profile" element={<Profile />} />
         </Route>
+
+        {/* Admin Dashboard routes */}
         <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/create-category" element={<CreateCategory />}/>
+          <Route path="admin/create-product" element={<CreateProduct />}/>
+          <Route path="admin/users" element={<Users />}/>
         </Route>
         
 
