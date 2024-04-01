@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { GiShoppingCart } from "react-icons/gi";
 import { useAuth } from "../../context/auth";
-import toast, { Toast } from "react-hot-toast";
+import toast from "react-hot-toast";
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const handleLogout = () => {
@@ -71,7 +71,7 @@ const Header = () => {
                     </NavLink>
                     <ul className="dropdown-menu">
                       <li>
-                        <NavLink to="/dashboard" className="dropdown-item">
+                        <NavLink to={`/dashboard/${auth?.user?.role===1?"admin":"user"}`} className="dropdown-item">
                           Dashboard
                         </NavLink>
                       </li>
