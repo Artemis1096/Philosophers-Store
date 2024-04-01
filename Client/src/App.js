@@ -8,20 +8,31 @@ import Register from "./pages/Auth/Register.js";
 import Login from "./pages/Auth/Login.js";
 import Dashboard from "./pages/user/Dashboard.js";
 import PrivateRoute from "./components/Layout/Routes/Private.js";
+import ForgotPassword from "./pages/Auth/ForgotPassword.js";
+
 function App() {
   return (
     <>
       <Routes>
+        {/* Pages routes */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<PrivateRoute />}>
-          <Route path="" element={<Dashboard />} />
-        </Route>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="*" element={<Pagenotfound />} />
+
+
+        {/* Dashboard routes */}
+        <Route path="/dashboard" element={<PrivateRoute />}>
+          <Route path="" element={<Dashboard />} />
+        </Route>
+        
+
+        {/* Login / Signup */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+
       </Routes>
     </>
   );
