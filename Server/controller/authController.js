@@ -25,7 +25,7 @@ export const registerController = async(req,res)=>{
         }
 
         // if the user with same data exits
-        const userExists = await userModel.findOne({email})
+        const userExists = await userModel.findOne({email}) // as email is our unique identifier
         if(userExists){
             return res.status(200).send({
                 success:true,
@@ -33,7 +33,7 @@ export const registerController = async(req,res)=>{
             })
         }
         
-        const hashedPassword = await hashPassword(password)
+        const hashedPassword = await hashPassword(password); // hashing the password and then storing it in the database
         const user =await new userModel({name,email,phone,address,password:hashedPassword}).save();
 
         res.status(201).send({
@@ -71,14 +71,14 @@ export const loginController = async (req,res)=>{
                 message:"Email is not registered"
             })
         }
-        const match = await comparePassword(password,user.password)
-        if(!match){
+        const match = await comparePassword(password,user.password); //using bcrypt library
+        if(!match){ // if password does'nt matches
             return res.status(200).send({
                 success:false,
                 message:"Invalid Password"
             })
         }
-        // token
+        // token generation
         const token = await JWT.sign({_id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
         res.status(200).send({
             success:true,
@@ -89,7 +89,7 @@ export const loginController = async (req,res)=>{
                 phone:user.phone,
                 address:user.address,
             },
-            token,
+            token
         })
     } catch (error) {
         console.log(error)

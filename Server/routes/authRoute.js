@@ -11,5 +11,7 @@ router.post('/register',registerController)
 // Login Route
 router.post('/login',loginController)
 
+// Authentication Check
 router.get('/test',requireSignIn,isAdmin,testController);
+
 export default router;
