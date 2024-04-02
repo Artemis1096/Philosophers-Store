@@ -25,10 +25,12 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     answer : {
+        // used for resetting password
         type:String,
         required:true,
     },
     role:{
+        // 0 role is for users and 1 role is admin
         type:Number,
         default:0
     }

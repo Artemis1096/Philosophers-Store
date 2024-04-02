@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt'
 
 export const hashPassword=async(password)=>{
     try{
-        const saltRounds = 10;
+        const saltRounds = 10; //used for hashing password
         const hashedPassword = await bcrypt.hash(password,saltRounds);
         return hashedPassword;
     }
@@ -12,5 +12,6 @@ export const hashPassword=async(password)=>{
 };
 
 export const comparePassword = async (password,hashedPassword) => {
-   return bcrypt.compare(password,hashedPassword);
+    // compares hashed password with the entered password
+    return bcrypt.compare(password,hashedPassword);
 }
