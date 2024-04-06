@@ -44,7 +44,10 @@ const CreateCategory = () => {
       toast.error("Something wwent wrong in getting catgeory");
     }
   };
-
+  useEffect(() => {
+    getAllCategory();
+  }, []);
+  
   //update category
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -85,9 +88,6 @@ const CreateCategory = () => {
     }
   };
 
-  useEffect(() => {
-    getAllCategory();
-  }, []);
 
   return (
     <Layout title={"Dashboard - Create Category"}>

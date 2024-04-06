@@ -18,6 +18,10 @@ import Orders from "./pages/user/Orders.js"
 import Profile from "./pages/user/Profile.js"
 import Products from "./pages/admin/Products.js";
 import UpdateProduct from "./pages/admin/UpdateProduct.js";
+import Search from "./pages/Search.js"
+import ProductDetail from './pages/productDetails.js'
+import Categories from "./pages/Categories.js";
+import CategoryProduct from "./pages/CategoryProduct.js";
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
       <Routes>
         {/* Pages routes */}
         <Route path="/" element={<HomePage />} />
+        <Route path="/product/:slug" element={<ProductDetail />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/category/:slug" element={<CategoryProduct />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
