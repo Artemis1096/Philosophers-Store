@@ -266,11 +266,11 @@ export const relatedProductController = async(req,res)=>{
 export const productCategoryController = async(req,res)=>{
     try {
         const category = await categoryModel.findOne({slug:req.params.slug})
-        const product = await productModel.find({category}).populate('category')
+        const products = await productModel.find({category}).populate('category')
         res.status(200).send({
             success:true,
             category,
-            product
+            products
         })
     } catch (error) {
         console.log(error);
