@@ -12,11 +12,12 @@
 .navbar {
   font-family: "poppins", sans-serif;
   font-size: 17px;
-  line-height: 26px;
+  
+  /* line-height: 26px; */
   text-transform: uppercase;
-  box-shadow: 0 8px -6px gray;
+  /* box-shadow: 0 8px -6px gray;
   --webkit-box-shadow: 0 8px -6px gray;
-  border-bottom: 0.3px solid gray !important;
+  border-bottom: 0.3px solid gray !important; */
 }
 .nav-link {
   font-weight: 300 !important;
@@ -29,17 +30,20 @@
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
 }
+.container-fluid{
+  color: white;
+}
 
 .footer {
   color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  padding: 30px;
+  /* background: #000000; fallback for old browsers */
+  /* background: -webkit-linear-gradient(
     to right,
     #434343,
     #000000
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+  /* background: linear-gradient(to right, #434343, #000000); */ 
 }
 
 .footer a {

@@ -20,7 +20,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -33,9 +33,19 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div
+            className="collapse navbar-collapse"
+            style={{
+              color: "red",
+            }}
+            id="navbarTogglerDemo01"
+          >
             <Link to="/" className="navbar-brand">
-              <GiShoppingCart></GiShoppingCart> E-COMMERCE App
+              <GiShoppingCart></GiShoppingCart>{" "}
+              <img
+                src="D:\project devjam\Ecommerce-MERN\Client\public\philo.png"
+                alt=""
+              ></img>
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />
@@ -97,21 +107,25 @@ const Header = () => {
                     </NavLink>
                     <ul className="dropdown-menu">
                       <li>
-                        <NavLink to={`/dashboard/${auth?.user?.role===1?"admin":"user"}`} className="dropdown-item">
+                        <NavLink
+                          to={`/dashboard/${
+                            auth?.user?.role === 1 ? "admin" : "user"
+                          }`}
+                          className="dropdown-item"
+                        >
                           Dashboard
                         </NavLink>
                       </li>
                       <li>
-                      <NavLink
-                        onClick={handleLogout}
-                        to="/login"
-                        className="dropdown-item"
-                        href="#"
-                      >
-                        Logout
-                      </NavLink>
+                        <NavLink
+                          onClick={handleLogout}
+                          to="/login"
+                          className="dropdown-item"
+                          href="#"
+                        >
+                          Logout
+                        </NavLink>
                       </li>
-                      
                     </ul>
                   </li>
                 </>

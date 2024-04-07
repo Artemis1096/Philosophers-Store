@@ -3,10 +3,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import { Toaster } from "react-hot-toast";
+import "../../styles/Layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div>
+    <div className="layoutf">
       <Helmet>
         <meta charSet="utf-8" />
 
