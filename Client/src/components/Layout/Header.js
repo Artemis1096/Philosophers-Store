@@ -5,9 +5,12 @@ import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import SearchInput from "../forms/SeachInput";
 import useCategory from "../../hooks/useCategory";
+import { useCart } from "../../context/cart";
+import { Badge } from "antd";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
+  const [cart] = useCart();
   const categories = useCategory();
   const handleLogout = () => {
     setAuth({
@@ -35,7 +38,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              <GiShoppingCart></GiShoppingCart> E-COMMERCE App
+              <GiShoppingCart></GiShoppingCart> Philosopher's Store
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />
@@ -117,9 +120,11 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
-                <NavLink to="/cart" className="nav-link" href="#">
-                  Cart (0)
-                </NavLink>
+                <Badge count={cart?.length} showZero>
+                  <NavLink to="/cart" className="nav-link" href="#">
+                    Cart
+                  </NavLink>
+                </Badge>
               </li>
             </ul>
           </div>
