@@ -7,7 +7,7 @@ import "../../styles/Layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div className="layoutf">
+    <div className="layoutf d-flex flex-column">
       <Helmet>
         <meta charSet="utf-8" />
 
@@ -18,8 +18,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main style={{ minHeight: "70vh" }}>
-        <Toaster />
+      <main className="d-flex" style={{ width: "100%" }}>
         {children}
       </main>
       <Footer />

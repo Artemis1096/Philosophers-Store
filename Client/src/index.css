@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
 }
 /* font-family : 'poppins' , sans-serif; */
 /* font-family : "Playfair Display", serif; */
@@ -12,14 +13,16 @@
 .navbar {
   font-family: "poppins", sans-serif;
   font-size: 17px;
-  
+  /* background-color: aqua; */
   /* line-height: 26px; */
+  width: 100%;
   text-transform: uppercase;
   /* box-shadow: 0 8px -6px gray;
   --webkit-box-shadow: 0 8px -6px gray;
   border-bottom: 0.3px solid gray !important; */
 }
 .nav-link {
+  color: white;
   font-weight: 300 !important;
 }
 .active {
@@ -95,4 +98,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#filter-section{
+  /* border: 1px solid red; */
+  color:white;
+}
+#wholep{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  /* background-color: #ffefba; */
+  /* border: 1px solid black; */
+  margin-top: 40px;
+}
+#products-sec{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+flex-direction: column;
+  /* margin-left: 2rem; */
+}
+#sabsebda{
+  /* border: 1px solid black; */
+  display: flex;
+}
+#image{
+  height: 300px; 
+  width: 286px; 
+  padding: 30px 60px;
+  vertical-align:middle;
 }

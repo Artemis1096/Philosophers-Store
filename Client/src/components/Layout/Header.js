@@ -7,6 +7,7 @@ import SearchInput from "../forms/SeachInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
+import logo from "./img.svg";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -44,11 +45,8 @@ const Header = () => {
             id="navbarTogglerDemo01"
           >
             <Link to="/" className="navbar-brand">
-              <GiShoppingCart></GiShoppingCart>{" "}
-              <img
-                src="D:\project devjam\Ecommerce-MERN\Client\public\philo.png"
-                alt=""
-              ></img>
+              {/* <GiShoppingCart></GiShoppingCart>  */}
+              <img src={logo} alt="" />
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />
