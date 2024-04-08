@@ -22,7 +22,9 @@
   border-bottom: 0.3px solid gray !important; */
 }
 .nav-link {
-  color: white;
+
+  color: white !important;
+
   font-weight: 300 !important;
 }
 .active {
@@ -100,10 +102,7 @@
   justify-content: center;
 }
 
-#filter-section{
-  /* border: 1px solid red; */
-  color:white;
-}
+
 #wholep{
   display: flex;
   width: 100%;
@@ -119,8 +118,9 @@
 flex-direction: column;
   /* margin-left: 2rem; */
 }
-#sabsebda{
-  /* border: 1px solid black; */
+
+#homepage-main{
+
   display: flex;
 }
 #image{
@@ -128,4 +128,12 @@ flex-direction: column;
   width: 286px; 
   padding: 30px 60px;
   vertical-align:middle;
+
+}
+.ant-checkbox-wrapper{
+  color: rgb(184, 162, 36) !important;
+}
+.ant-radio-wrapper{
+  color: rgb(184, 162, 36) !important;
+
 }

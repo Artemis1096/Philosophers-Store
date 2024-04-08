@@ -1,21 +1,23 @@
-/* ===================================
-========= register page  */
+
+/* register page  */
+
+/* ===================================*/
+
 .layoutf {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 70vh;
     flex-direction: column;
-    /* background-color: #f9f4f6; */
-    /* background-image: url('D:\project devjam\Ecommerce-MERN\Client\public\images\hogwarts.jpg'); */
+
     background-size: cover;
 }
   
   .form-container form {
-    /* border:1px solid black; */
+
     box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
     padding: 20px;
-    /* background-color: #fff; */
+
   }
   
   
@@ -42,10 +44,7 @@
   .form-container form input::placeholder{
     color: white;
   }
-    
 
-
-  
   .form-container form button {
     border: 1px solid black;
     border-radius: 10px;
@@ -80,5 +79,17 @@
       to right,
       rgb(184, 162, 36),
       #000000
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    ); 
+  }
+
+  /* Header */
+  .navbar-item:active {
+    color: white;
+  }
+
+  .cart-nav{
+    font-size: 1.1rem;
+    margin-top: 3px;
+
   }
