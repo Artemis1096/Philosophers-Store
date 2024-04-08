@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { GiShoppingCart } from "react-icons/gi";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import SearchInput from "../forms/SeachInput";
@@ -8,6 +7,9 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import logo from "./img.svg";
+
+import "../../styles/Layout.css";
+
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -45,10 +47,11 @@ const Header = () => {
             id="navbarTogglerDemo01"
           >
             <Link to="/" className="navbar-brand">
-              {/* <GiShoppingCart></GiShoppingCart>  */}
+
+
               <img src={logo} alt="" />
             </Link>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
               <SearchInput />
               <li className="nav-item">
                 <NavLink to="/" className="nav-link ">
@@ -133,7 +136,7 @@ const Header = () => {
               )}
               <li className="nav-item">
                 <Badge count={cart?.length} showZero>
-                  <NavLink to="/cart" className="nav-link" href="#">
+                  <NavLink to="/cart" className="nav-link cart-nav" href="#">
                     Cart
                   </NavLink>
                 </Badge>
