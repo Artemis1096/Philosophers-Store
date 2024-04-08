@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <Layout title="Register - Ecommer App">
       <div className="form-container ">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-box">
           <h4 className="title">LOGIN FORM</h4>
 
           <div className="mb-3">

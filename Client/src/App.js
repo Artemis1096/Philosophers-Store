@@ -24,10 +24,16 @@ import Categories from "./pages/Categories.js";
 import CategoryProduct from "./pages/CategoryProduct.js";
 import CartPage from "./pages/CartPage.js";
 import AdminOrders from "./pages/admin/adminOrders.js";
+import ParticlesComponent from "./styles/ParticleBackground.js";
+import './App.css'
 
 function App() {
   return (
     <>
+      <div id="particles">
+        <div>
+          <ParticlesComponent/>
+        </div>
       <Routes>
         {/* Pages routes */}
         <Route path="/" element={<HomePage />} />
@@ -67,6 +73,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
       </Routes>
+      </div>
     </>
   );
 }

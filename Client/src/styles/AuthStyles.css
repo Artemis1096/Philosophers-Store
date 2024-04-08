@@ -6,14 +6,15 @@
     justify-content: center;
     min-height: 70vh;
     flex-direction: column;
-    background-color: #ffdee9;
-    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+    /* background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%); */
   }
   
   .form-container form {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    margin-left: 31rem;
   }
   
   .form-container form .title {
@@ -50,4 +51,7 @@
       #434343,
       #000000
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .form-box{
+    margin: auto;
   }

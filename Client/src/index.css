@@ -12,13 +12,16 @@
 .navbar {
   font-family: "poppins", sans-serif;
   font-size: 17px;
-  line-height: 26px;
+  /* background-color: aqua; */
+  /* line-height: 26px; */
+  width: 100%;
   text-transform: uppercase;
-  box-shadow: 0 8px -6px gray;
+  /* box-shadow: 0 8px -6px gray;
   --webkit-box-shadow: 0 8px -6px gray;
-  border-bottom: 0.3px solid gray !important;
+  border-bottom: 0.3px solid gray !important; */
 }
 .nav-link {
+  color: white !important;
   font-weight: 300 !important;
 }
 .active {
@@ -29,17 +32,20 @@
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
 }
+.container-fluid{
+  color: white;
+}
 
 .footer {
   color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  padding: 30px;
+  /* background: #000000; fallback for old browsers */
+  /* background: -webkit-linear-gradient(
     to right,
     #434343,
     #000000
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+  /* background: linear-gradient(to right, #434343, #000000); */ 
 }
 
 .footer a {
@@ -91,4 +97,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#wholep{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  /* background-color: #ffefba; */
+  /* border: 1px solid black; */
+  margin-top: 40px;
+}
+#products-sec{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+flex-direction: column;
+  /* margin-left: 2rem; */
+}
+#homepage-main{
+  display: flex;
+}
+#image{
+  height: 300px; 
+  width: 286px; 
+  padding: 30px 60px;
+  vertical-align:middle;
+}
+.ant-checkbox-wrapper{
+  color: rgb(184, 162, 36) !important;
+}
+.ant-radio-wrapper{
+  color: rgb(184, 162, 36) !important;
 }

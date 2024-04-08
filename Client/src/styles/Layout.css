@@ -1,0 +1,85 @@
+/* register page  */
+.layoutf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    flex-direction: column;
+    background-size: cover;
+}
+  
+  .form-container form {
+    box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
+    padding: 20px;
+  }
+  
+  
+  .form-container form .title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(233, 184, 59);
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .form-container form input {
+    border: none;
+    border-bottom: 1px solid rgb(184, 162, 36);
+    border-radius: 10px;
+    color: white;
+    background-color: #000000;
+  }
+ 
+  .form-container form input:enabled{
+    background-color: rgb(43, 40, 40);
+    color: aliceblue;
+  }
+  .form-container form input::placeholder{
+    color: white;
+  }
+  .form-container form button {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #383030;
+    /* color: white; */
+    width: 250px;
+  }
+  .form-container form hover {
+    border: 1000px solid black;
+    /* background: #000000; fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+    rgb(184, 162, 36),
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgb(184, 162, 36),
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .form-container form button:hover {
+    border: 1px solid black;
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+    rgb(184, 162, 36),
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgb(184, 162, 36),
+      #000000
+    ); 
+  }
+
+  /* Header */
+  .navbar-item:active {
+    color: white;
+  }
+
+  .cart-nav{
+    font-size: 1.1rem;
+    margin-top: 3px;
+  }
