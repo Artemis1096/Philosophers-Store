@@ -1,16 +1,23 @@
+
 /* register page  */
+
+/* ===================================*/
+
 .layoutf {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 70vh;
     flex-direction: column;
+
     background-size: cover;
 }
   
   .form-container form {
+
     box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
     padding: 20px;
+
   }
   
   
@@ -37,6 +44,7 @@
   .form-container form input::placeholder{
     color: white;
   }
+
   .form-container form button {
     border: 1px solid black;
     border-radius: 10px;
@@ -71,6 +79,7 @@
       to right,
       rgb(184, 162, 36),
       #000000
+
     ); 
   }
 
@@ -82,4 +91,5 @@
   .cart-nav{
     font-size: 1.1rem;
     margin-top: 3px;
+
   }
