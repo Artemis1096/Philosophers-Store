@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
 }
 /* font-family : 'poppins' , sans-serif; */
 /* font-family : "Playfair Display", serif; */
@@ -21,7 +22,9 @@
   border-bottom: 0.3px solid gray !important; */
 }
 .nav-link {
+
   color: white !important;
+
   font-weight: 300 !important;
 }
 .active {
@@ -99,6 +102,7 @@
   justify-content: center;
 }
 
+
 #wholep{
   display: flex;
   width: 100%;
@@ -114,7 +118,9 @@
 flex-direction: column;
   /* margin-left: 2rem; */
 }
+
 #homepage-main{
+
   display: flex;
 }
 #image{
@@ -122,10 +128,12 @@ flex-direction: column;
   width: 286px; 
   padding: 30px 60px;
   vertical-align:middle;
+
 }
 .ant-checkbox-wrapper{
   color: rgb(184, 162, 36) !important;
 }
 .ant-radio-wrapper{
   color: rgb(184, 162, 36) !important;
+
 }

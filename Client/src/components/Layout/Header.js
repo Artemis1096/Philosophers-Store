@@ -7,7 +7,9 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import logo from "./img.svg";
+
 import "../../styles/Layout.css";
+
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -45,6 +47,8 @@ const Header = () => {
             id="navbarTogglerDemo01"
           >
             <Link to="/" className="navbar-brand">
+
+
               <img src={logo} alt="" />
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
