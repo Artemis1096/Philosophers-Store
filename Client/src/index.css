@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
+  /* background-color: black; */
 }
 /* font-family : 'poppins' , sans-serif; */
 /* font-family : "Playfair Display", serif; */
@@ -31,6 +31,7 @@
   border-bottom: 2px solid black;
 }
 .navbar-brand {
+  margin-top: 30px;
   font-weight: 700;
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
@@ -136,4 +137,7 @@ flex-direction: column;
 .ant-radio-wrapper{
   color: rgb(184, 162, 36) !important;
 
+}
+.nav-bra{
+  margin-top: 10px;
 }

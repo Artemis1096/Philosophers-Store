@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
+import { Button } from "@material-tailwind/react";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,21 +68,21 @@ const Login = () => {
             />
           </div>
           <div className="mb-3">
-            <button type="submit" className="btn btn-primary ">
+            <Button type="submit" className=" ">
               LOGIN
-            </button>{" "}
+            </Button>
           </div>
 
           <div className="mb-3">
-            <button
+            <Button
               type="button"
-              className="btn btn-primary"
+              className=""
               onClick={() => {
                 navigate("/forgot-password");
               }}
             >
               Forgot Password
-            </button>
+            </Button>
           </div>
         </form>
       </div>

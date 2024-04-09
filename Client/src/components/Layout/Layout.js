@@ -6,7 +6,8 @@ import "../../styles/Layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div className="layoutf d-flex flex-column">
+    // <div className="layoutf d-flex flex-column">
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
 
@@ -17,9 +18,8 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main className="d-flex" style={{ width: "100%" }}>
-        {children}
-      </main>
+      <hr style={{ color: "gold", opacity: 1 }} />
+      <main style={{ width: "100%" }}>{children}</main>
       <Footer />
     </div>
   );

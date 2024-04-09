@@ -10,7 +10,6 @@ import logo from "./img.svg";
 
 import "../../styles/Layout.css";
 
-
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
@@ -46,11 +45,9 @@ const Header = () => {
             }}
             id="navbarTogglerDemo01"
           >
-            <Link to="/" className="navbar-brand">
-
-
+            <div className="nav-bra">
               <img src={logo} alt="" />
-            </Link>
+            </div>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
               <SearchInput />
               <li className="nav-item">
