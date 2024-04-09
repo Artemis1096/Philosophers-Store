@@ -1,0 +1,17 @@
+.cart-heading{
+    color: white;
+}
+.cart-items{
+    padding: 1rem;
+    margin: 2rem;
+}
+.cart-item-image{
+    height: 10rem;
+    border-radius: 6px;
+}
+.cart-main{
+    height: 50rem;
+}
+.cart-checkout{
+    margin-top: -1rem;
+}
