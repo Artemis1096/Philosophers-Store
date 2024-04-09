@@ -6,8 +6,10 @@ import { useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import '../styles/Cart.css'
 
 const CartPage = () => {
+  // eslint-disable-next-line
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
   const [clientToken, setClientToken] = useState("");
@@ -19,6 +21,7 @@ const CartPage = () => {
   const totalPrice = () => {
     try {
       let total = 0;
+      // eslint-disable-next-line
       cart?.map((item) => {
         total = total + item.price;
       });
@@ -61,6 +64,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
+      // eslint-disable-next-line
       const { data } = await axios.post("/api/v1/product/braintree/payment", {
         nonce,
         cart,
@@ -77,13 +81,13 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <div className="container">
+      <div className="container cart-main">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="text-center bg-light p-2 mb-1">
+            <h1 className="text-center cart-heading p-2 mb-1">
               {`Hello ${auth?.token && auth?.user?.name}`}
             </h1>
-            <h4 className="text-center">
+            <h4 className="text-center cart-heading">
               {cart?.length
                 ? `You Have ${cart.length} items in your cart ${
                     auth?.token ? "" : "please login to checkout"
@@ -95,11 +99,11 @@ const CartPage = () => {
         <div className="row">
           <div className="col-md-8">
             {cart?.map((p) => (
-              <div className="row mb-2 p-3 card flex-row" key={p._id}>
+              <div className="row mb-2 card flex-row cart-items" key={p._id}>
                 <div className="col-md-4">
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
-                    className="card-img-top"
+                    className="card-img-top cart-item-image"
                     alt={p.name}
                     width="100px"
                     height={"100px"}
@@ -119,11 +123,12 @@ const CartPage = () => {
               </div>
             ))}
           </div>
-          <div className="col-md-4 text-center">
+          <div className="col-md-4 text-center cart-heading">
             <h2>Cart Summary</h2>
             <p>Total | Checkout | Payment</p>
             <hr />
             <h4>Total : {totalPrice()} </h4>
+            <hr />
             {auth?.user?.address ? (
               <>
                 <div className="mb-3">
@@ -155,12 +160,13 @@ const CartPage = () => {
                       })
                     }
                   >
-                    Plase Login to checkout
+                    Please Login to checkout
                   </button>
                 )}
               </div>
             )}
-            <div className="mt-2">
+            <hr />
+            <div className="cart-checkout">
               {!clientToken || !cart?.length ? (
                 ""
               ) : (
