@@ -155,7 +155,7 @@ const HomePage = () => {
           {/* Products section */}
           <div className="col-md-10 d-flex" id="products-sec">
             <h1 className="text-center">All Products</h1>
-            <div className="d-flex justify-content-around">
+            <div className="d-flex justify-content-around flex-column">
               {products?.map((p) => (
                 <div
                   className="card m-2"

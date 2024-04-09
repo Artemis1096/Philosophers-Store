@@ -2,15 +2,16 @@ import React,{useState,useEffect} from 'react'
 import useCategory from '../hooks/useCategory.js'
 import Layout from '../components/Layout/Layout.js'
 import { Link } from 'react-router-dom'
+import '../styles/Categories.css'
 
 const Categories = () => {
   const categories = useCategory()
   return (
     <Layout title={'All Categories'}>
-        <div className='container'>
-            <div className='row'>
+        <div className='category-box'>
+            <div>
                 {categories.map((c)=>(
-                    <div className='col-md-6 mt-5 mb-3 gx-3' key={c._id}>
+                    <div className='category-cards' key={c._id}>
                         <Link to={`/category/${c.slug}`} className='btn btn-primary'>{c.name}</Link>
                     </div>
                 ))}

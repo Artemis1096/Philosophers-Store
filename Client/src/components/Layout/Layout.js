@@ -6,8 +6,7 @@ import "../../styles/Layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    // <div className="layoutf d-flex flex-column">
-    <div>
+    <div className="">
       <Helmet>
         <meta charSet="utf-8" />
 
