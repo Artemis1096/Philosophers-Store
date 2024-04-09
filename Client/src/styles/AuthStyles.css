@@ -9,13 +9,9 @@
   }
   
   .form-container form {
-    /* border:1px solid black; */
     box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
     padding: 20px;
-    /* background-color: #fff; */
-
-    margin-left: 31rem;
-
+    /* margin-left: 31rem; */
   }
   
   
@@ -81,7 +77,4 @@
       rgb(184, 162, 36),
       #000000
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-  .form-box{
-    margin: auto;
   }

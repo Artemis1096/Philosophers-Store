@@ -111,15 +111,11 @@ const HomePage = () => {
 
   return (
     <Layout title={"Shop-Now"}>
-
       <div id="homepage-main" className="container-fluid d-flex">
-
-    
         <div className="row d-flex justify-content-between" id="wholep">
           <div
             className="col-md-2 d-flex flex-column order-first"
             id="filter-section"
-
           >
             <h4 className="text-center">Filter By Category</h4>
             <div className="d-flex flex-column">
@@ -138,7 +134,6 @@ const HomePage = () => {
             <h4 className="text-center mt-4">Filter By Price</h4>
 
             <div className="d-flex flex-column filter-category">
-
               <Radio.Group onChange={(e) => setRadio(e.target.value)}>
                 {Prices?.map((p) => (
                   <div key={p._id}>

@@ -5,8 +5,9 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 import { SearchProvider } from "./context/search";
-import {CartProvider} from './context/cart'
+import { CartProvider } from "./context/cart";
 import ParticleBackground from "./styles/ParticleBackground.js";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
     <SearchProvider>
       <CartProvider>
         <BrowserRouter>
-          <App /> 
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
           <ParticleBackground />
         </BrowserRouter>
       </CartProvider>
