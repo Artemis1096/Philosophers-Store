@@ -12,6 +12,7 @@
 .navbar {
   font-family: "poppins", sans-serif;
   font-size: 17px;
+  /* background-color: aqua; */
   /* line-height: 26px; */
   width: 100%;
   text-transform: uppercase;
@@ -29,7 +30,6 @@
   border-bottom: 2px solid black;
 }
 .navbar-brand {
-  margin-top: 30px;
   font-weight: 700;
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
@@ -135,7 +135,4 @@ flex-direction: column;
 .ant-radio-wrapper{
   color: rgb(184, 162, 36) !important;
 
-}
-.nav-bra{
-  margin-top: 10px;
 }

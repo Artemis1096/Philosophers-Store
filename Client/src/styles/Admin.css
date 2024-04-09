@@ -1,0 +1,26 @@
+/* Dashboard */
+.dashboard-main{
+    height: 33rem;
+}
+.side-menu{
+    color: white;
+}
+.dashboard-textarea{
+    margin-top: 3rem;
+}
+.admin-text{
+    background: transparent;
+    color: white;
+}
+
+/* Admin Menu */
+#Menu-Heading{
+    padding: 1rem;
+    background-color:white;
+    color: black;
+    border-radius: 10px;
+}
+
+#Menu-group{
+    border-radius: 2rem;
+}

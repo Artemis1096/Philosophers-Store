@@ -95,3 +95,8 @@
   .footer{
     margin-top: 9rem;
   }
+  .horizontal-line{
+    color: gold;
+    border: 2;
+    opacity:1
+    }

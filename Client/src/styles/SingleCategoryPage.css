@@ -1,0 +1,14 @@
+.Category-heading{
+    color:rgb(195, 185, 81);
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.Category-cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: space-between;
+}
+.category-btn-group{
+    display: flex;
+}

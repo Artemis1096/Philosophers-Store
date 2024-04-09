@@ -1,0 +1,32 @@
+.product-details-container{
+    margin-top: 100px;
+    padding: 3rem;
+    margin-left: 100px;
+    border: 2px solid goldenrod;
+}
+.product-description{
+        color: white;
+        margin-left: 8rem;
+        margin-top: -0.5rem;
+}
+.product-image{
+    height: 25rem;
+    width: 23rem;
+    z-index: 4;
+}
+.product-image img {
+    height: 25rem;
+   
+}
+.product-heading{
+    margin-bottom: 3rem;
+}
+.button-add-to-cart-p{
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    border: 5px solid rgb(195, 185, 81);
+    border-style: inset;
+    border-radius: 10px;
+    background-color: #b08b1d;
+}

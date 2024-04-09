@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart.js";
 import toast from "react-hot-toast";
 import "../index.css";
-
+import "../styles/home.css";
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
@@ -113,12 +113,9 @@ const HomePage = () => {
     <Layout title={"Shop-Now"}>
       <div id="homepage-main" className="container-fluid d-flex">
         <div className="row d-flex justify-content-between" id="wholep">
-          <div
-            className="col-md-2 d-flex flex-column order-first"
-            id="filter-section"
-          >
+          <div className="col-md-2 order-first">
             <h4 className="text-center">Filter By Category</h4>
-            <div className="d-flex flex-column">
+            <div className="filtcat">
               {categories?.map((c) => (
                 <Checkbox
                   key={c._id}
@@ -131,20 +128,20 @@ const HomePage = () => {
               ))}
             </div>
             {/* Prices filter */}
-            <h4 className="text-center mt-4">Filter By Price</h4>
+            <h4 className=" text-center mt-3">Filter By Price</h4>
 
-            <div className="d-flex flex-column filter-category">
+            <div className="filter-category">
               <Radio.Group onChange={(e) => setRadio(e.target.value)}>
                 {Prices?.map((p) => (
-                  <div key={p._id}>
+                  <div className="filterprice" key={p._id}>
                     <Radio value={p.array}>{p.name}</Radio>
                   </div>
                 ))}
               </Radio.Group>
             </div>
-            <div className="d-flex flex-column">
+            <div className="resetbut">
               <button
-                className="btn btn-primary"
+                className="resetbutton"
                 onClick={() => window.location.reload()}
               >
                 Reset Filters
@@ -155,7 +152,7 @@ const HomePage = () => {
           {/* Products section */}
           <div className="col-md-10 d-flex" id="products-sec">
             <h1 className="text-center">All Products</h1>
-            <div className="d-flex justify-content-around flex-column">
+            <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
                   className="card m-2"
@@ -171,23 +168,23 @@ const HomePage = () => {
                         maxWidth: "500px",
                         maxHeight: "300px",
                       }}
-                      alt={p.name}
+                      alt={p.name} 
                     />
                   </div>
-                  <div className="card-body">
+                  <div className="card-body image-lower-layout">
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">
                       {p.description.substring(0, 30)}
                     </p>
                     <p className="card-text">{p.price}</p>
                     <button
-                      className="btn btn-primary ms-1"
+                      className="button-more-details"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
                     </button>
                     <button
-                      className="btn btn-secondary ms-1"
+                      className="button-add-to-cart"
                       onClick={() => {
                         setCart([...cart, p]);
                         localStorage.setItem(

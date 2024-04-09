@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
-import { Button } from "@material-tailwind/react";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,7 +40,7 @@ const Login = () => {
   };
   return (
     <Layout title="Register - Ecommer App">
-      <div className="form-container ">
+      <div className="form-container  login-container ">
         <form onSubmit={handleSubmit} className="form-box">
           <h4 className="title">LOGIN FORM</h4>
 
@@ -68,21 +67,21 @@ const Login = () => {
             />
           </div>
           <div className="mb-3">
-            <Button type="submit" className=" ">
+            <button type="submit" className="btn btn-primary ">
               LOGIN
-            </Button>
+            </button>{" "}
           </div>
 
           <div className="mb-3">
-            <Button
+            <button
               type="button"
-              className=""
+              className="btn btn-primary"
               onClick={() => {
                 navigate("/forgot-password");
               }}
             >
               Forgot Password
-            </Button>
+            </button>
           </div>
         </form>
       </div>

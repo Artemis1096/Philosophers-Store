@@ -7,8 +7,8 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import logo from "./img.svg";
-
 import "../../styles/Layout.css";
+import "../../styles/header.css";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -25,10 +25,10 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg header-main">
         <div className="container-fluid">
           <button
-            className="navbar-toggler"
+            className="navbar-toggler header-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
@@ -45,9 +45,9 @@ const Header = () => {
             }}
             id="navbarTogglerDemo01"
           >
-            <div className="nav-bra">
+            <Link to="/" className="navbar-brand philosopher-image">
               <img src={logo} alt="" />
-            </div>
+            </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
               <SearchInput />
               <li className="nav-item">
