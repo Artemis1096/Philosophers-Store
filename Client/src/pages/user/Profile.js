@@ -4,6 +4,7 @@ import UserMenu from "../../components/Layout/UserMenu";
 import { useAuth } from "../../context/auth.js";
 import toast from "react-hot-toast";
 import axios from "axios";
+import '../../styles/User.css'
 
 const Profile = () => {
   // context api's
@@ -52,14 +53,14 @@ const Profile = () => {
 
   return (
     <Layout>
-      <div className="container-fluid p-3 m-3">
+      <div className="container-fluid p-3">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
           </div>
           <div className="col-md-9">
             <div className="form-container ">
-              <form onSubmit={handleSubmit}>
+              <form className="form-box" onSubmit={handleSubmit}>
                 <h4 className="title">User Profile</h4>
                 <div className="mb-3">
                   <input

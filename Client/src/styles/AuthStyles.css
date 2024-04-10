@@ -1,9 +1,10 @@
 /* ===================================
 ========= register page  */
 .form-container {
+  margin-left: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
     min-height: 70vh;
     flex-direction: column;
   }

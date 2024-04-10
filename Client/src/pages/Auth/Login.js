@@ -40,7 +40,7 @@ const Login = () => {
   };
   return (
     <Layout title="Register - Ecommer App">
-      <div className="form-container ">
+      <div className="form-container  login-container ">
         <form onSubmit={handleSubmit} className="form-box">
           <h4 className="title">LOGIN FORM</h4>
 

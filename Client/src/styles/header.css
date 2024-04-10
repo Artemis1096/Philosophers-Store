@@ -1,0 +1,40 @@
+.header-main{
+ background-color: black;
+}
+.nav-main{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.header-toggler{
+    color: white;
+    margin-left: 28rem;
+    border-radius: 10px;
+    background: white;
+}
+.philosopher-image{
+    margin-top: 0.5rem;
+}
+.logo-image{
+    width: 6rem;
+    height: 6rem;
+    margin-right: 24rem;
+}
+.divider-image{
+    margin-right: 50px;
+}
+.invert-divider-image{
+    margin-left: 50px;
+    transform: scaleX(-1);
+}
+.user-logo{
+    color: white;
+    width: 16rem;
+    height: 2.9rem;
+    margin-left: 21rem;
+}
+.cart-icon-head{
+    color: white;
+    height: 2.9rem;
+    margin-left: 2rem;
+}

@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart.js";
 import toast from "react-hot-toast";
 import "../index.css";
-import "../styles/Homepage.css"
-
+import "../styles/home.css";
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
@@ -112,18 +111,11 @@ const HomePage = () => {
 
   return (
     <Layout title={"Shop-Now"}>
-
       <div id="homepage-main" className="container-fluid d-flex">
-
-    
         <div className="row d-flex justify-content-between" id="wholep">
-          <div
-            className="col-md-2 d-flex flex-column order-first"
-            id="filter-section"
-
-          >
+          <div className="col-md-2 order-first">
             <h4 className="text-center">Filter By Category</h4>
-            <div className="d-flex flex-column">
+            <div className="filtcat">
               {categories?.map((c) => (
                 <Checkbox
                   key={c._id}
@@ -136,21 +128,20 @@ const HomePage = () => {
               ))}
             </div>
             {/* Prices filter */}
-            <h4 className="text-center mt-4">Filter By Price</h4>
+            <h4 className=" text-center mt-3">Filter By Price</h4>
 
-            <div className="d-flex flex-column filter-category">
-
+            <div className="filter-category">
               <Radio.Group onChange={(e) => setRadio(e.target.value)}>
                 {Prices?.map((p) => (
-                  <div key={p._id}>
+                  <div className="filterprice" key={p._id}>
                     <Radio value={p.array}>{p.name}</Radio>
                   </div>
                 ))}
               </Radio.Group>
             </div>
-            <div className="d-flex flex-column">
+            <div className="resetbut">
               <button
-                className="btn btn-primary"
+                className="resetbutton"
                 onClick={() => window.location.reload()}
               >
                 Reset Filters
@@ -164,11 +155,11 @@ const HomePage = () => {
             <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
-                  className="card m-2"
+                  className="card m-2 div-of-product"
                   style={{ width: "18rem" }}
                   key={p._id}
                 >
-                  <div id="image">
+                  <div id="">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -177,23 +168,26 @@ const HomePage = () => {
                         maxWidth: "500px",
                         maxHeight: "300px",
                       }}
-                      alt={p.name}
+                      alt={p.name} 
                     />
                   </div>
-                  <div className="card-body">
+                  <div className="card-body image-lower-layout">
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">
                       {p.description.substring(0, 30)}
                     </p>
                     <p className="card-text">{p.price}</p>
+                    <div className="button-more-details">
                     <button
-                      className="btn btn-primary ms-1"
+                      
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
-                      More Details
+                     <span>More Details</span>
                     </button>
+                    </div>
+                    <div className="button-add-to-cart">
                     <button
-                      className="btn btn-secondary ms-1"
+                      
                       onClick={() => {
                         setCart([...cart, p]);
                         localStorage.setItem(
@@ -203,8 +197,8 @@ const HomePage = () => {
                         toast.success("Item Added to Cart");
                       }}
                     >
-                      Add to Cart
-                    </button>
+                      <span>Add to cart</span>
+                    </button></div>
                   </div>
                 </div>
               ))}
