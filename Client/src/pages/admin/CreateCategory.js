@@ -3,8 +3,9 @@ import Layout from "../../components/Layout/Layout";
 import AdminMenu from "../../components/Layout/AdminMenu";
 import toast from "react-hot-toast";
 import axios from "axios";
-import CategoryForm from '../../components/forms/CategoryForm.js'
-import {Modal} from "antd"
+import CategoryForm from '../../components/forms/CategoryForm.js';
+import {Modal} from "antd";
+import '../../styles/Admin.css';
 
 const CreateCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -106,11 +107,11 @@ const CreateCategory = () => {
               />
             </div>
             <div className="w-75">
-              <table className="table">
+              <table className="Create-Category-Table">
                 <thead>
                   <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col" className="Create-Category-Table-head">Name</th>
+                    <th scope="col" className="Create-Category-Table-head">Actions</th>
                   </tr>
                 </thead>
                 <tbody>

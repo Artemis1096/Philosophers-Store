@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart.js";
 import toast from "react-hot-toast";
 import "../index.css";
+import "../styles/Homepage.css"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -160,7 +161,7 @@ const HomePage = () => {
           {/* Products section */}
           <div className="col-md-10 d-flex" id="products-sec">
             <h1 className="text-center">All Products</h1>
-            <div className="d-flex justify-content-around flex-column">
+            <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
                   className="card m-2"
