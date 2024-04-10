@@ -155,11 +155,11 @@ const HomePage = () => {
             <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
-                  className="card m-2"
+                  className="card m-2 div-of-product"
                   style={{ width: "18rem" }}
                   key={p._id}
                 >
-                  <div id="image">
+                  <div id="">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -177,14 +177,17 @@ const HomePage = () => {
                       {p.description.substring(0, 30)}
                     </p>
                     <p className="card-text">{p.price}</p>
+                    <div className="button-more-details">
                     <button
-                      className="button-more-details"
+                      
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
-                      More Details
+                     <span>More Details</span>
                     </button>
+                    </div>
+                    <div className="button-add-to-cart">
                     <button
-                      className="button-add-to-cart"
+                      
                       onClick={() => {
                         setCart([...cart, p]);
                         localStorage.setItem(
@@ -194,8 +197,8 @@ const HomePage = () => {
                         toast.success("Item Added to Cart");
                       }}
                     >
-                      Add to Cart
-                    </button>
+                      <span>Add to cart</span>
+                    </button></div>
                   </div>
                 </div>
               ))}

@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+import '../../styles/User.css';
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -28,10 +29,10 @@ const Orders = () => {
             <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Orders</h1>
+            <h1 className="text-center orders-heading">All Orders</h1>
             {orders?.map((o, i) => {
               return (
-                  <div className="border shadow">
+                  <div className="">
                   <table className="table">
                     <thead>
                       <tr>
@@ -60,7 +61,7 @@ const Orders = () => {
                         <div className="col-md-4">
                           <img
                             src={`/api/v1/product/product-photo/${p._id}`}
-                            className="card-img-top"
+                            className="card-img-top order-image"
                             alt={p.name}
                             width="100px"
                             height={"100px"}

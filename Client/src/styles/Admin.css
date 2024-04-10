@@ -20,7 +20,46 @@
     color: black;
     border-radius: 10px;
 }
-
 #Menu-group{
-    border-radius: 2rem;
+    border-radius: 1.5rem;
+}
+
+/* Admin Create Category Page */
+.Create-Category-Table{
+    background-color: black;
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    /* height: 48rem; */
+}
+
+/* Admin Create Product Page */
+.Create-Product-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+.Create-Product-heading{
+    color: white;
+    margin-top: -7.5px;
+    margin-bottom: 1.2rem;
+}
+.Create-Product-container2{
+    width: 70%;
+}
+
+/* All Products Page */
+.AllProducts-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Product-img{
+    height: 18.5rem;
+}
+
+/* Orders Page */
+.order-container{
+    width: 70%;
 }

@@ -16,7 +16,7 @@ const AdminOrders = () => {
     "deliverd",
     "cancel",
   ]);
-  const [changeStatus, setCHangeStatus] = useState("");
+  // const [changeStatus, setCHangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
@@ -48,11 +48,11 @@ const AdminOrders = () => {
         <div className="col-md-3">
           <AdminMenu />
         </div>
-        <div className="col-md-9">
-          <h1 className="text-center">All Orders</h1>
+        <div className="col-md-9 order-container">
+          <h1 className="text-center text-white">All Orders</h1>
           {orders?.map((o, i) => {
             return (
-              <div className="border shadow">
+              <div className="">
                 <table className="table">
                   <thead>
                     <tr>

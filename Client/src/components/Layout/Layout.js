@@ -19,7 +19,6 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <hr className="horizontal-line"/>
       <main className="" style={{ width: "100%" }}>
         {children}
       </main>

@@ -1,9 +1,9 @@
 .header-main{
-
+ background-color: black;
 }
 .header-toggler{
     color: white;
 }
 .philosopher-image{
-    margin-top: 20px;
+    margin-top: 0.5rem;
 }
