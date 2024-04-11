@@ -1,0 +1,19 @@
+.div-of-landing{
+    margin-top: 70px;
+    width: 85%;
+    margin-left: 7rem;
+}
+.div-of-about-us h3{
+    color:gold;
+}
+.div-of-about-us{
+    margin-top: 7rem;
+    width: 70%;
+   padding: 2rem;
+    margin-left: 15rem;
+    color: White;
+}
+.divider-about-us{
+    display: flex;
+    
+}

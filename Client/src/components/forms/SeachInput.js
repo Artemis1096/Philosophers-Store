@@ -23,7 +23,19 @@ const SearchInput = () => {
     <div>
       <form className="d-flex search-form" role="search" onSubmit={handleSubmit}>
         <input
-          className="form-control me-2 search-input"
+          className="me-2 search-input"
+          style={{
+            backgroundColor: " rgba(0,0,0,0)",
+            color:"white",
+            hover: {
+              backgroundColor: "tranparent",
+              color:"white",
+            },
+            placeholder: {
+              color: "red",
+              opacity: 1, /* Firefox */
+            }
+          }}
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -36,6 +48,7 @@ const SearchInput = () => {
             backgroundColor: "gold",
             hover: {
               backgroundColor: "black",
+              color:"white",
             },
           }}
           type="submit"

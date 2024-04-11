@@ -1,6 +1,16 @@
-.search-input{
-    width: 25rem;
-}
+
 .search-form{
     margin-right: 4rem;
+}
+.search-form input ::placeholder{
+    background-color: aqua;
+}
+.search-form input{
+border: 5px solid white;
+border-radius: 10px;
+width: 15rem;
+}
+.search-form input :hover{
+    background-color: aliceblue;
+    border: 2px solid rgb(126, 131, 198);
 }

@@ -159,24 +159,23 @@ const HomePage = () => {
                   style={{ width: "18rem" }}
                   key={p._id}
                 >
-                  <div id="">
+                  <div id="product-image">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
-                      style={{
-                        backgroundColor: "white",
-                        maxWidth: "500px",
-                        maxHeight: "300px",
-                      }}
+                      
+          
                       alt={p.name} 
                     />
                   </div>
+               
                   <div className="card-body image-lower-layout">
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">
-                      {p.description.substring(0, 30)}
+                      {p.description.substring(0, 60)}
                     </p>
                     <p className="card-text">{p.price}</p>
+                    <div className="buttons-for-product">
                     <div className="button-more-details">
                     <button
                       
@@ -199,6 +198,7 @@ const HomePage = () => {
                     >
                       <span>Add to cart</span>
                     </button></div>
+                    </div>
                   </div>
                 </div>
               ))}

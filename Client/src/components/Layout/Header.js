@@ -8,13 +8,16 @@ import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import logo from "./img.svg";
 import logo2 from '../../assets/logo.png'
-import divider from"./divider.svg"
+import divider from"../../assets/divider.svg"
+import dot from '../../assets/dot.svg'
 import '../../styles/header.css'
 import "../../styles/Layout.css";
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import LocalMallTwoToneIcon from '@mui/icons-material/LocalMallTwoTone';
+import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
   const categories = useCategory();
@@ -55,11 +58,11 @@ const Header = () => {
             <Link to="/" className="navbar-brand">
               <img src={logo} className="philosopher-image" alt="" />
             </Link>
-            {/* <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
               <SearchInput />
-            </ul> */}
-            <AccountCircleTwoToneIcon className="user-logo"/>
-            <LocalMallTwoToneIcon className="cart-icon-head"/>
+            </ul>
+            <AccountCircleTwoToneIcon className="user-logo" onClick={()=>navigate(`/dashboard/user`)}/>
+            <LocalMallTwoToneIcon className="cart-icon-head" onClick={()=>navigate(`/cart`)}/>
           </div>
         </div>
       </nav>
@@ -73,6 +76,9 @@ const Header = () => {
                 <NavLink to="/" className="nav-link ">
                   Home
                 </NavLink>
+              </li>
+              <li>
+              <img src={dot} className="dot-image" alt=""/>
               </li>
               <li className="nav-item dropdown">
                 <Link
@@ -100,12 +106,18 @@ const Header = () => {
                   ))}
                 </ul>
               </li>
+              <li>
+              <img src={dot} className="dot-image" alt=""/>
+              </li>
               {!auth.user ? (
                 <>
                   <li className="nav-item">
                     <NavLink to="/register" className="nav-link" href="#">
                       Register
                     </NavLink>
+                  </li>
+                  <li>
+                    <img src={dot} className="dot-image" alt=""/>
                   </li>
                   <li className="nav-item">
                     <NavLink to="/login" className="nav-link" href="#">
@@ -150,6 +162,9 @@ const Header = () => {
                   </li>
                 </>
               )}
+              <li>
+              <img src={dot} className="dot-image" alt=""/>
+              </li>
               <li className="nav-item">
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link cart-nav" href="#">

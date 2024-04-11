@@ -31,10 +31,20 @@
     color: white;
     width: 16rem;
     height: 2.9rem;
-    margin-left: 21rem;
+    margin-left: 2rem;
 }
 .cart-icon-head{
     color: white;
     height: 2.9rem;
     margin-left: 2rem;
+}
+.navbar-items{
+
+}
+.dot-image{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    transform: rotateX() rotateY();
+    margin-top: 0.8rem;
+    transform: rotateY(180deg);
 }
