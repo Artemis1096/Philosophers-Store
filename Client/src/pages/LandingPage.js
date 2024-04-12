@@ -38,7 +38,7 @@ const LandingPage = () => {
   return (
     <Layout title={"Philosopher's Store"}>
       <div className="div-of-landing">
-        <div id="carouselExampleCaptions" className="carousel slide">
+        <div id="carouselExampleCaptions" className="carousel slide carousel-border">
           <div className="carousel-indicators">
             <button
               type="button"
@@ -108,28 +108,32 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="latest-main">
-        <div className="divider-about-us">
+        <div className="divider-latest">
           <div className="divider">
             <img src={divider} className="divider-image" alt="" />
           </div>
           <h3>Latest Products</h3>
+         
           <div className="invert-divider">
             <img src={divider} className="invert-divider-image" alt="" />
           </div>
         </div>
-        <br />
-        {/* // */}
+        <br/>
+        <br/>
+        <br/>
+
+        
         <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
                   className="card m-2 div-of-product"
-                  style={{ width: "18rem" }}
+                  style={{ width: "23rem" }}
                   key={p._id}
                 >
                   <div id="product-image">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
-                      className="card-img-top"
+                      className="card-img-top product-img-center"
                       
           
                       alt={p.name} 
@@ -182,11 +186,11 @@ const LandingPage = () => {
           </div>
         </div>
         <br />
-        <h4 style={{ textAlign: "center" }}>
+        <h1 style={{ textAlign: "center" }}>
           Welcome to the Philosopher's Store !
-        </h4>
+        </h1>
         <br />
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center",fontSize:"larger" }}>
           In the heart of Diagon Alley, nestled between quaint cobblestone
           streets and bustling shops, lies one of the most enchanting
           establishments in the wizarding world: the Hogwarts Magic Store. With
@@ -194,7 +198,7 @@ const LandingPage = () => {
           intricate spell motifs, the store beckons witches and wizards from far
           and wide to explore its wonders.
         </p>
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center",fontSize:"larger" }}>
           As visitors wander through the enchanting aisles of the Philosopher's
           Magic Store, they are transported to a world where the impossible
           becomes possible and the extraordinary becomes ordinary. Whether in
