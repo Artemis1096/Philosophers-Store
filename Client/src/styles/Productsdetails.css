@@ -90,3 +90,8 @@
   .btn-class{
     display: flex;
   }
+  .p-img{
+    width: 22rem;
+    height: 25rem;
+    margin-left: 0.5rem;
+  }

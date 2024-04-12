@@ -2,6 +2,7 @@
 ========= register page  */
 .form-container {
   margin-left: 100px;
+  width: 30rem;
     display: flex;
     align-items: center;
     justify-content: center;   
@@ -11,6 +12,7 @@
   
   .form-container form {
     /* border:1px solid black; */
+    margin-right: 29rem;
     box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
     padding: 20px;
     /* background-color: #fff; */
@@ -85,4 +87,7 @@
   }
   .form-box{
     margin: auto;
+  }
+  .form-email{
+    background-color: #000000 !important;
   }

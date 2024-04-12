@@ -78,7 +78,7 @@ const Profile = () => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
+                    className="form-control form-email"
                     id="exampleInputEmail1"
                     placeholder="Enter Your Email "
                     disabled

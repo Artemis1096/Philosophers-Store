@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import "../styles/Productsdetails.css"
+import "../styles/Productsdetails.css";
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -52,13 +52,13 @@ const ProductDetails = () => {
         <div className="col-md-6 product-description">
           <h1 className="text-center product-heading">Product Details</h1>
           <h6>Name : {product.name}</h6>
-          <br/>
+          <br />
           <h6>Description : {product.description}</h6>
-          <br/>
+          <br />
           <h6>Price : {product.price}</h6>
-          <br/>
+          <br />
           <h6>Category : {product?.category?.name}</h6>
-          <br/>
+          <br />
           <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
         </div>
       </div>
@@ -70,10 +70,10 @@ const ProductDetails = () => {
         )}
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
-            <div className="card m-2" style={{ width: "18rem" }}>
+            <div className="card m-2" style={{ width: "24rem" }}>
               <img
                 src={`/api/v1/product/product-photo/${p?._id}`}
-                className="card-img-top"
+                className="card-img-top p-img"
                 alt={p.name}
               />
               <div className="card-body">
@@ -81,11 +81,16 @@ const ProductDetails = () => {
                 <p className="card-text">{p.description.substring(0, 30)}...</p>
                 <p className="card-text"> $ {p.price}</p>
                 <div className="btn-class">
-                <button className="bttn btn--svg-small btn--add" onClick={() => navigate(`/product/${p.slug}`)}>
-                  More Details
-                </button>
-                <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
-                  </div>
+                  <button
+                    className="bttn btn--svg-small btn--add"
+                    onClick={() => navigate(`/product/${p.slug}`)}
+                  >
+                    More Details
+                  </button>
+                  <button class="bttn btn--svg-small btn--add">
+                    ADD TO CART
+                  </button>
+                </div>
               </div>
             </div>
           ))}

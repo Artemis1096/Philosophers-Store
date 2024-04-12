@@ -181,7 +181,7 @@ const HomePage = () => {
                     <p className="card-text">
                       {p.description.substring(0, 60)}
                     </p>
-                    <p className="card-text">{p.price}</p>
+                    <p className="card-text" style={{fontWeight:"bolder"}}> ʛ {p.price}</p>
                     <div className="buttons-for-product">
                     <div>
                     <button
