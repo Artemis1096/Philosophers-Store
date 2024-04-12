@@ -181,6 +181,8 @@ export const updateProfileController = async(req,res)=>{
 // Get Orders
 export const getOrdersController = async(req,res)=>{
     try {
+        // gets all orders details from database 
+        // it is used in admin dashboard
         const orders = await orderModel
           .find({ buyer: req.user._id })
           .populate("products", "-photo")
@@ -219,6 +221,7 @@ export const getAllOrdersController = async (req, res) => {
 // Order Status Controller
 export const orderStatusController = async(req,res)=>{
     try {
+        // gets order id from req params and updated status from req body
         const {orderId}=req.params;
         const {status}=req.body
         const orders = await orderModel.findByIdAndUpdate(orderId,{status},{new:true})
