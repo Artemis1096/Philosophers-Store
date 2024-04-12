@@ -1,12 +1,14 @@
 import categoryModel from "../models/categoryModel.js";
 import slugify from "slugify"
 
+// Create Category
 export const createCategoryController= async(req,res)=>{
     try{
         const {name} = req.body
         if(!name){
             return res.status(401).send({message:"Name is required"})
         }
+        // Checking if a category already exists
         const existingCategory = await categoryModel.findOne({name});
         if(existingCategory){
             return res.status(200).send({
@@ -31,8 +33,10 @@ export const createCategoryController= async(req,res)=>{
     }
 }
 
+// Update Category
 export const updateCategoryController = async (req,res) =>{
     try {
+        // getting the id you want to change in req.params and new name in req.body
         const {name} = req.body;
         const {id} = req.params;
         const category = await categoryModel.findByIdAndUpdate(id,{name,slug:slugify(name)},{new:true})
@@ -51,6 +55,7 @@ export const updateCategoryController = async (req,res) =>{
     }
 }
 
+// Getting All Categories
 export const categoryController = async (req,res) => {
     try {
         const category = await categoryModel.find({})
@@ -69,7 +74,7 @@ export const categoryController = async (req,res) => {
     }
 }
 
-// single category
+// Getting Single Category
 export const singleCategoryController = async (req,res) => {
     try {
         const category = await categoryModel.findOne({slug:req.params.slug});
@@ -88,7 +93,7 @@ export const singleCategoryController = async (req,res) => {
     }
 }
 
-// delete category
+// Delete Category
 export const deleteCategoryController = async (req,res) => {
     try {
         const {id}=req.params
