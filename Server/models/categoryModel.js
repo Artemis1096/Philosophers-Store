@@ -5,6 +5,7 @@ const categorySchema=new mongoose.Schema({
         type:String,
     },
     slug:{
+        // if name is category model then its slug will be category-model
         type:String,
         lowercase:true
     }

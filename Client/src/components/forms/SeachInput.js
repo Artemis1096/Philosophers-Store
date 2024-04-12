@@ -23,7 +23,19 @@ const SearchInput = () => {
     <div>
       <form className="d-flex search-form" role="search" onSubmit={handleSubmit}>
         <input
-          className="form-control me-2 search-input"
+          className="me-2 search-input"
+          style={{
+            backgroundColor: " rgba(0,0,0,0)",
+            color:"white",
+            hover: {
+              backgroundColor: "tranparent",
+              color:"white",
+            },
+            placeholder: {
+              color: "red",
+              opacity: 1, /* Firefox */
+            }
+          }}
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -31,13 +43,7 @@ const SearchInput = () => {
           onChange={(e) => setValues({ ...values, keyword: e.target.value })}
         />
         <button
-          className="btn btn-outline-success"
-          style={{
-            backgroundColor: "gold",
-            hover: {
-              backgroundColor: "black",
-            },
-          }}
+          className="bttn btn--svg-small btn--add search-btn"
           type="submit"
         >
           Search

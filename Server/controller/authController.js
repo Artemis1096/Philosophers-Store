@@ -8,7 +8,7 @@ export const registerController = async(req,res)=>{
     try {
         const {name,email,password,phone,address,answer}=req.body
 
-        // validation
+        // validation 
         if(!name){
             return res.send({message:"Name is Required"})
         }
@@ -83,7 +83,7 @@ export const loginController = async (req,res)=>{
                 message:"Invalid Password"
             })
         }
-        // token
+        // JWT token
         const token = await JWT.sign({_id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
         res.status(200).send({
             success:true,
@@ -119,7 +119,7 @@ export const forgotPasswordController = async (req,res) => {
         if(!newPassword){
             res.status(400).send({message:' newpassword is required'})
         }
-        //check 
+        //check if user exists in database
         const user = await userModel.findOne({email,answer})
         if(!user){
             return res.status(404).send({
@@ -127,6 +127,7 @@ export const forgotPasswordController = async (req,res) => {
                 message:'wrong email or answer'
             })
         }
+        // hashing the password
         const hashed = await hashPassword(newPassword)
         await userModel.findByIdAndUpdate(user._id,{password:hashed});
         res.status(200).send({
@@ -144,12 +145,13 @@ export const forgotPasswordController = async (req,res) => {
     }
 };
 
+// Update Profile Controller
 export const updateProfileController = async(req,res)=>{
     try {
         const {name,email,password,address,phone}=req.body;
         const user = await userModel.findById(req.user._id);
 
-        // password
+        // password change conditions
         if(password && password.length<6){
             return res.json({error:'Password is required and its length should be greater than 6'});
         }
@@ -197,6 +199,7 @@ export const getOrdersController = async(req,res)=>{
 // Get Orders admin
 export const getAllOrdersController = async (req, res) => {
     try {
+        // finds all orders of a particular user 
       const orders = await orderModel
         .find({})
         .populate("products", "-photo")

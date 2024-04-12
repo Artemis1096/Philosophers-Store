@@ -26,6 +26,7 @@ import CartPage from "./pages/CartPage.js";
 import AdminOrders from "./pages/admin/adminOrders.js";
 import ParticlesComponent from "./styles/ParticleBackground.js";
 import './App.css'
+import LandingPage from "./pages/LandingPage.js";
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
         </div>
       <Routes>
         {/* Pages routes */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<HomePage />} />
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:slug" element={<CategoryProduct />} />

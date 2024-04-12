@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
 import AdminMenu from "../../components/Layout/AdminMenu";
 import Layout from "../../components/Layout/Layout";
 import { useAuth } from "../../context/auth";
@@ -9,6 +8,7 @@ import { Select } from "antd";
 const { Option } = Select;
 
 const AdminOrders = () => {
+  // eslint-disable-next-line
   const [status, setStatus] = useState([
     "Not Process",
     "Processing",
@@ -16,8 +16,8 @@ const AdminOrders = () => {
     "deliverd",
     "cancel",
   ]);
-  // const [changeStatus, setCHangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
+  // eslint-disable-next-line
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
@@ -34,6 +34,7 @@ const AdminOrders = () => {
 
   const handleChange = async (orderId, value) => {
     try {
+      // eslint-disable-next-line
       const { data } = await axios.put(`/api/v1/auth/order-status/${orderId}`, {
         status: value,
       });

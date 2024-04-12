@@ -12,6 +12,7 @@ const ProductDetails = () => {
   //inital details
   useEffect(() => {
     if (params?.slug) getProduct();
+    // eslint-disable-next-line
   }, [params?.slug]);
   //getProduct
   const getProduct = async () => {
@@ -58,7 +59,7 @@ const ProductDetails = () => {
           <br/>
           <h6>Category : {product?.category?.name}</h6>
           <br/>
-          <button class="button-add-to-cart-p">ADD TO CART</button>
+          <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
         </div>
       </div>
       <hr />
@@ -79,13 +80,12 @@ const ProductDetails = () => {
                 <h5 className="card-title">{p.name}</h5>
                 <p className="card-text">{p.description.substring(0, 30)}...</p>
                 <p className="card-text"> $ {p.price}</p>
-                <button
-                  className="btn btn-primary ms-1"
-                  onClick={() => navigate(`/product/${p.slug}`)}
-                >
+                <div className="btn-class">
+                <button className="bttn btn--svg-small btn--add" onClick={() => navigate(`/product/${p.slug}`)}>
                   More Details
                 </button>
-                <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
+                  </div>
               </div>
             </div>
           ))}

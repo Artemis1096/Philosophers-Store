@@ -6,6 +6,7 @@ import { Prices } from "../components/Prices.js";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart.js";
 import toast from "react-hot-toast";
+import SearchInput from "../components/forms/SeachInput.js";
 import "../index.css";
 import "../styles/home.css";
 const HomePage = () => {
@@ -61,10 +62,12 @@ const HomePage = () => {
 
   useEffect(() => {
     if (!checked.length || !radio.length) getAllProducts();
+    // eslint-disable-next-line
   }, [checked.length, radio.length]);
 
   useEffect(() => {
     if (checked.length || radio.length) filterProduct();
+    // eslint-disable-next-line
   }, [checked, radio]);
 
   // filtering categories
@@ -94,6 +97,7 @@ const HomePage = () => {
   useEffect(() => {
     if (page === 1) return;
     loadMore();
+    // eslint-disable-next-line
   }, [page]);
 
   // load more products
@@ -152,6 +156,9 @@ const HomePage = () => {
           {/* Products section */}
           <div className="col-md-10 d-flex" id="products-sec">
             <h1 className="text-center">All Products</h1>
+            <div>
+              <SearchInput />
+            </div>
             <div className="d-flex products-card-all">
               {products?.map((p) => (
                 <div
@@ -159,35 +166,34 @@ const HomePage = () => {
                   style={{ width: "18rem" }}
                   key={p._id}
                 >
-                  <div id="">
+                  <div id="product-image">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
-                      style={{
-                        backgroundColor: "white",
-                        maxWidth: "500px",
-                        maxHeight: "300px",
-                      }}
+                      
+          
                       alt={p.name} 
                     />
                   </div>
+               
                   <div className="card-body image-lower-layout">
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">
-                      {p.description.substring(0, 30)}
+                      {p.description.substring(0, 60)}
                     </p>
                     <p className="card-text">{p.price}</p>
-                    <div className="button-more-details">
+                    <div className="buttons-for-product">
+                    <div>
                     <button
-                      
+                      className="bttn btn--svg-small btn--add"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                      <span>More Details</span>
                     </button>
                     </div>
-                    <div className="button-add-to-cart">
+                    <div>
                     <button
-                      
+                      className="bttn btn--svg-small btn--add"
                       onClick={() => {
                         setCart([...cart, p]);
                         localStorage.setItem(
@@ -199,6 +205,7 @@ const HomePage = () => {
                     >
                       <span>Add to cart</span>
                     </button></div>
+                    </div>
                   </div>
                 </div>
               ))}
