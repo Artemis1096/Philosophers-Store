@@ -1,6 +1,0 @@
-30 March 
-backend basic setup
-installed nodemon,express,mongoose,morgan
-morgan -> prints all the api requests on console
-
-express-formidable -> used for getting image inputs in database

@@ -38,7 +38,7 @@ const ProductDetails = () => {
     }
   };
   return (
-    <Layout>
+    <Layout title={product.name}>
       <div className="row container mt-5 product-details-container">
         <div className="col-md-6 product-image">
           <img
