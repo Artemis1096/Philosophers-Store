@@ -14,18 +14,18 @@ const Contact = () => {
         </div>
         <div className="col-md-4">
           <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
-          <p className="text-justify mt-2">
-            any query and info about prodduct feel free to call anytime we 24X7
-            vaialible
+          <p className="text-justify mt-2 text-white">
+            Any query and info about product feel free to call anytime we 24X7
+            available
           </p>
-          <p className="mt-3">
-            <BiMailSend /> : www.help@ecommerceapp.com
+          <p className="mt-3 text-white">
+            <BiMailSend /> : PhilosopherStore@hogwarts.com
           </p>
-          <p className="mt-3">
-            <BiPhoneCall /> : 012-3456789
+          <p className="mt-3 text-white">
+            <BiPhoneCall /> : 9490394039
           </p>
-          <p className="mt-3">
-            <BiSupport /> : 1800-0000-0000 (toll free)
+          <p className="mt-3 text-white">
+            <BiSupport /> : 1800-0000-0000 
           </p>
         </div>
       </div>

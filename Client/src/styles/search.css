@@ -1,0 +1,82 @@
+.search-form {
+    margin-top: 0.5rem;
+    text-align: center;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    margin-right: -4rem;
+}
+.search-form input {
+  border: 3px solid white;
+  height: 2.3rem;
+  border-radius: 10px;
+  width: 83%;
+  text-align: center;
+}
+.search-form input :hover {
+  background-color: aliceblue;
+  border: 2px solid rgb(126, 131, 198);
+}
+.search-btn{
+    background-color: #c0b047;
+}
+.search-btn:hover{
+  background-color: black;
+  color: white;
+}
+
+.btn--add{
+    color: #fcf5e7;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #0000;
+    background-image: url(btn_small_bg.svg);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    border: none;
+    height: 38px;
+    margin: 0 20px;
+    padding: 10px 15px;
+    font-family: bluu_nextbold, Crimson Text, serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.bttn{
+   position: relative; 
+   cursor: pointer;
+}
+
+.btn--svg-small:before {
+    background-image: url(btn_small_left.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 21px;
+    height: 38px;
+    left: -20px;
+}
+
+.bttn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+}
+
+.btn--svg-small:after {
+    background-image: url(btn_small_right.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 20px;
+    height: 38px;
+    right: -20px;
+}
+
+.bttn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+}

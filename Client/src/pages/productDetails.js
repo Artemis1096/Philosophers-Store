@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout/Layout";
+import Layout from "../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import "../styles/Productsdetails.css"
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const ProductDetails = () => {
   //inital details
   useEffect(() => {
     if (params?.slug) getProduct();
+    // eslint-disable-next-line
   }, [params?.slug]);
   //getProduct
   const getProduct = async () => {
@@ -37,8 +39,8 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
-      <div className="row container mt-2">
-        <div className="col-md-6">
+      <div className="row container mt-5 product-details-container">
+        <div className="col-md-6 product-image">
           <img
             src={`/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
@@ -47,13 +49,17 @@ const ProductDetails = () => {
             width={"350px"}
           />
         </div>
-        <div className="col-md-6 ">
-          <h1 className="text-center">Product Details</h1>
+        <div className="col-md-6 product-description">
+          <h1 className="text-center product-heading">Product Details</h1>
           <h6>Name : {product.name}</h6>
+          <br/>
           <h6>Description : {product.description}</h6>
+          <br/>
           <h6>Price : {product.price}</h6>
+          <br/>
           <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          <br/>
+          <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
         </div>
       </div>
       <hr />
@@ -74,13 +80,12 @@ const ProductDetails = () => {
                 <h5 className="card-title">{p.name}</h5>
                 <p className="card-text">{p.description.substring(0, 30)}...</p>
                 <p className="card-text"> $ {p.price}</p>
-                <button
-                  className="btn btn-primary ms-1"
-                  onClick={() => navigate(`/product/${p.slug}`)}
-                >
+                <div className="btn-class">
+                <button className="bttn btn--svg-small btn--add" onClick={() => navigate(`/product/${p.slug}`)}>
                   More Details
                 </button>
-                <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                <button class="bttn btn--svg-small btn--add">ADD TO CART</button>
+                  </div>
               </div>
             </div>
           ))}

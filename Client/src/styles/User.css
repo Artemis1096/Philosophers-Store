@@ -1,0 +1,39 @@
+/* User Dashboard */
+.user-dashboard{
+    background: transparent;
+    color: white;
+}
+.user-h{
+    height: 30rem;
+}
+/* User Menu */
+.user-sidemenu-heading{
+    padding: 1rem;
+    background-color:white;
+    color: black;
+    border-radius: 10px;
+}
+.user-sidemenu-items{
+    padding: 1rem !important;
+}
+/*  User Profile */
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    flex-direction: column;
+}
+.form-box{
+    box-shadow: rgba(143, 141, 141, 0.35) 0px 0px 15px 1px;
+    padding: 20px;
+    margin-left: 20rem;   
+}
+/* Orders Page */
+.orders-heading{
+    color: white;
+}
+.order-image{
+    height: 13rem;
+    width: 14rem;
+}

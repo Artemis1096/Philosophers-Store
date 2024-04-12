@@ -1,10 +1,12 @@
-import React,{useState,useEffect} from 'react'
-import Layout from '../../components/Layout/Layout'
-import AdminMenu from '../../components/Layout/AdminMenu'
-import axios from 'axios'
-import toast from 'react-hot-toast'
-import {Select} from 'antd'
-import { useNavigate } from 'react-router-dom'
+import React,{useState,useEffect} from 'react';
+import Layout from '../../components/Layout/Layout';
+import AdminMenu from '../../components/Layout/AdminMenu';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import {Select} from 'antd';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/Admin.css';
+
 const {Option} = Select;
 
 const CreateProduct = () => {
@@ -15,6 +17,7 @@ const CreateProduct = () => {
   const [description,setDescription]=useState("")
   const [price,setPrice]=useState("")
   const [quantity,setQuantity]=useState("")
+  //eslint-disable-next-line
   const [shipping,setShipping]=useState("")
   const [photo,setPhoto]=useState("")
 
@@ -60,12 +63,12 @@ const CreateProduct = () => {
   },[])
   return (
     <Layout title={"Dashboard - Create Product"}>
-      <div className='row'>
+      <div className='Create-Product-container'>
         <div className='col-md-3'>
           <AdminMenu/>
         </div>
-        <div className='col-md-9'>
-          <h1>CreateProduct</h1>
+        <div className='col-md-9 Create-Product-container2'>
+          <h1 className='Create-Product-heading'>CreateProduct</h1>
           <div className='m-1'>
             <Select variant={false} placeholder="Select a category" size='large' showSearch className='form-select mb-3' onChange={(value)=>{setCategory(value)}}>
                 {categories?.map(c=>(
@@ -133,7 +136,7 @@ const CreateProduct = () => {
                 </Select>
               </div>
               <div className="mb-3">
-                  <button className='' onClick={handleCreate}>CREATE PRODUCT</button>
+                  <button className='btn btn-primary' onClick={handleCreate}>CREATE PRODUCT</button>
               </div>
           </div>
         </div>

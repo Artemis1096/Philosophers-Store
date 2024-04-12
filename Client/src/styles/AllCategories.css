@@ -1,0 +1,25 @@
+.category-box{
+    display: flex;
+    height: auto;
+    margin: 0rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.category-cards{
+    padding: 7rem;
+    z-index: 1;
+}
+.category-btn{
+    width: 16rem;
+    height: 15rem;
+    padding-top: 6rem;
+    font-size: 2rem;
+    background-color: black;
+    color: rgb(195, 185, 81);
+    border: 2px solid rgb(195, 185, 81);
+}
+.category-btn:hover{
+    color: white;
+    border: 2px solid rgb(195, 185, 81);
+    border-style:ridge;
+}

@@ -2,11 +2,13 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
-import { Toaster } from "react-hot-toast";
+
+
+import "../../styles/Layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div>
+    <div className="">
       <Helmet>
         <meta charSet="utf-8" />
 
@@ -17,8 +19,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main style={{ minHeight: "70vh" }}>
-        <Toaster />
+      <main className="" style={{ width: "100%" }}>
         {children}
       </main>
       <Footer />

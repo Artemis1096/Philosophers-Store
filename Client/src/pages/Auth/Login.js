@@ -40,8 +40,8 @@ const Login = () => {
   };
   return (
     <Layout title="Register - Ecommer App">
-      <div className="form-container ">
-        <form onSubmit={handleSubmit}>
+      <div className="form-container  login-container ">
+        <form onSubmit={handleSubmit} className="form-box">
           <h4 className="title">LOGIN FORM</h4>
 
           <div className="mb-3">
@@ -67,6 +67,12 @@ const Login = () => {
             />
           </div>
           <div className="mb-3">
+            <button type="submit" className="btn btn-primary ">
+              LOGIN
+            </button>{" "}
+          </div>
+
+          <div className="mb-3">
             <button
               type="button"
               className="btn btn-primary"
@@ -77,10 +83,6 @@ const Login = () => {
               Forgot Password
             </button>
           </div>
-
-          <button type="submit" className="btn btn-primary">
-            LOGIN
-          </button>
         </form>
       </div>
     </Layout>

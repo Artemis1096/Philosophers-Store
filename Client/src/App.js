@@ -19,19 +19,30 @@ import Profile from "./pages/user/Profile.js"
 import Products from "./pages/admin/Products.js";
 import UpdateProduct from "./pages/admin/UpdateProduct.js";
 import Search from "./pages/Search.js"
-import ProductDetail from './pages/productDetails.js'
+import ProductDetails from "./pages/ProductDetails.js";
 import Categories from "./pages/Categories.js";
 import CategoryProduct from "./pages/CategoryProduct.js";
+import CartPage from "./pages/CartPage.js";
+import AdminOrders from "./pages/admin/adminOrders.js";
+import ParticlesComponent from "./styles/ParticleBackground.js";
+import './App.css'
+import LandingPage from "./pages/LandingPage.js";
 
 function App() {
   return (
     <>
+      <div id="particles">
+        <div>
+          <ParticlesComponent/>
+        </div>
       <Routes>
         {/* Pages routes */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product/:slug" element={<ProductDetail />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<HomePage />} />
+        <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:slug" element={<CategoryProduct />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/search" element={<Search />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -54,6 +65,7 @@ function App() {
           <Route path="admin/product/:slug" element={<UpdateProduct />}/>
           <Route path="admin/products" element={<Products />}/>
           <Route path="admin/users" element={<Users />}/>
+          <Route path="admin/orders" element={<AdminOrders />}/>
         </Route>
         
 
@@ -63,6 +75,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
       </Routes>
+      </div>
     </>
   );
 }

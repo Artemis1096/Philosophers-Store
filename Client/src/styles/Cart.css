@@ -1,0 +1,36 @@
+.cart-heading{
+    color: white;
+}
+.cart-items{
+    margin-top: 100px;
+    height: 250px;
+    background-color: rgb(243, 243, 243);
+    
+
+    margin: 2rem;
+}
+.cart-item-image{
+    margin-left: 70px;
+    height: 15rem;
+    border-radius: 6px;
+}
+.cart-main{
+    height: auto;
+}
+.cart-checkout{
+    margin-top: -1rem;
+}
+
+.cart-side{
+    /* margin-right: 100px; */
+    margin-top: 100px;
+    /* background-color: aqua; */
+}
+.cart-description-p{
+    margin-top: 36px;
+    margin-left: 188px;
+    width: 200px;
+}
+#payment-section{
+    margin-top: 7rem;
+}
