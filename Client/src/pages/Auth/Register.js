@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   return (
-    <Layout title="Register - Ecommer App">
+    <Layout title="Register">
       <div className="form-container ">
         <form onSubmit={handleSubmit} className="form-box">
           <h4 className="title">REGISTER FORM</h4>

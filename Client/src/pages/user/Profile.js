@@ -52,7 +52,7 @@ const Profile = () => {
   };
 
   return (
-    <Layout>
+    <Layout title={"Profile"}>
       <div className="container-fluid p-3">
         <div className="row">
           <div className="col-md-3">

@@ -52,17 +52,19 @@ const Header = () => {
             }}
             id="navbarTogglerDemo01"
           >
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="col-md-4 navbar-brand">
               <img src={logo2} className="logo-image" alt="" />
             </Link>
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="col-md-4 navbar-brand">
               <img src={logo} className="philosopher-image" alt="" />
             </Link>
             {/* <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-items">
               <SearchInput />
             </ul> */}
+            <div className="col-md-4 header-icons">
             <AccountCircleTwoToneIcon className="user-logo" onClick={()=>navigate(`/dashboard/user`)}/>
-            <LocalMallTwoToneIcon className="cart-icon-head" onClick={()=>navigate(`/cart`)}/>
+            <LocalMallTwoToneIcon className="user-logo" onClick={()=>navigate(`/cart`)}/>
+            </div>
           </div>
         </div>
       </nav>

@@ -163,13 +163,13 @@ const HomePage = () => {
               {products?.map((p) => (
                 <div
                   className="card m-2 div-of-product"
-                  style={{ width: "18rem" }}
+                  style={{ width: "23rem" }}
                   key={p._id}
                 >
                   <div id="product-image">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
-                      className="card-img-top"
+                      className="card-img-top product-img-center"
                       
           
                       alt={p.name} 
