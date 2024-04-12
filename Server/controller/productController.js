@@ -6,8 +6,9 @@ import slugify from 'slugify'
 import braintree from 'braintree';
 import dotenv from 'dotenv';
 
-dotenv.config();
-// payment gateway
+dotenv.config(); //enabling env file in this file
+
+// Payment Gateway
 const gateway = new braintree.BraintreeGateway({
     environment:braintree.Environment.Sandbox,
     merchantId:process.env.BRAINTREE_MERCHANT_ID,
@@ -15,6 +16,7 @@ const gateway = new braintree.BraintreeGateway({
     privateKey:process.env.BRAINTREE_PRIVATE_KEY, 
 });
 
+// Create Product Controller
 export const createProductController = async (req,res)=>{
     try {
         const {name,slug,description,price,category,quantity,shipping}=req.fields
@@ -55,6 +57,7 @@ export const createProductController = async (req,res)=>{
     }
 }
 
+// Get all Products
 export const getProductController = async (req,res)=> {
     try {
         const products=await productModel.find({}).populate('category').select("-photo").limit(12).sort({createdAt:-1}) //fetching products
@@ -74,7 +77,7 @@ export const getProductController = async (req,res)=> {
     }
 }
 
-
+// Get Single Product
 export const getSingleProductController = async (req,res)=> {
     try {
         const product = await productModel.findOne({slug:req.params.slug}).select('-photo').populate('category');
@@ -93,6 +96,7 @@ export const getSingleProductController = async (req,res)=> {
     }
 }
 
+// Get Product Image
 export const productPhotoController = async (req,res)=> {
     try {
         const product = await productModel.findById(req.params.pid).select('photo')
@@ -111,14 +115,13 @@ export const productPhotoController = async (req,res)=> {
     }
 }
 
-
+// Delete Product
 export const deleteProductController = async (req,res)=> {
     try {
         await productModel.findByIdAndDelete(req.params.pid).select('-photo')
         res.status(200).send({
             success:true,
             message:"Product deleted successfully"
-            // this functionality is not tested
         })
     } catch (error) {
         console.log(error);
@@ -130,7 +133,7 @@ export const deleteProductController = async (req,res)=> {
     }
 }
 
-
+// Update Product
 export const updateProductController = async (req,res)=> {
     try {   
         const {name,slug,description,price,category,quantity,shipping}=req.fields
@@ -173,6 +176,7 @@ export const updateProductController = async (req,res)=> {
     }
 }
 
+// Product Filter
 export const productFilterController = async(req,res)=>{
     try{
         const {checked,radio} = req.body;
@@ -195,6 +199,7 @@ export const productFilterController = async(req,res)=>{
     }
 }
 
+// Product Count
 export const productCountController = async(req,res)=>{
     try {
         const total = await productModel.find({}).estimatedDocumentCount();
@@ -256,6 +261,7 @@ export const searchProductController = async (req,res) =>{
 // Related Product Controller
 export const relatedProductController = async(req,res)=>{
     try {
+        // gets products other than current products in the same category
         const {pid,cid} = req.params
         const products = await productModel.find({
             category:cid,
@@ -294,7 +300,7 @@ export const productCategoryController = async(req,res)=>{
     }
 }
 
-// Payment gateway api
+// Payment gateway API
 export const braintreeTokenController = async(req,res)=>{
     try {
         gateway.clientToken.generate({},function(err,response){
