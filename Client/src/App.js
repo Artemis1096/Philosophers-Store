@@ -49,7 +49,6 @@ function App() {
         <Route path="/policy" element={<Policy />} />
         <Route path="*" element={<Pagenotfound />} />
 
-
         {/*User Dashboard routes */}
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
